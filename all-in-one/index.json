@@ -12,6 +12,9 @@
       "title": "第二步 - 发布服务",
       "courseData": "courseBase.sh",
       "text": "step2.md"
+    }, {
+      "title": "第三步 - 调用服务",
+      "text": "step3.md"
     }]
   },
   "environment": {
