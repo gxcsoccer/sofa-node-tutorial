@@ -10,7 +10,7 @@
       "text": "step1.md"
     }, {
       "title": "第二步 - 发布服务",
-      "courseData": "courseBase.sh",
+      "courseData": "step2.sh",
       "text": "step2.md"
     }, {
       "title": "第三步 - 调用服务",

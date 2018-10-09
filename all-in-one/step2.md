@@ -1,20 +1,13 @@
 初始化服务提供方工程
 
-`mkdir rpc-server && cd rpc-server`{{execute T1}}
-
-`egg-init`{{execute T1}}
-
-`npm i`{{execute T1}}
+`cd sofa-rpc-server`{{execute T1}}
 
 打开 `config/plugin.js`{{open}}
 
 <pre class="file" data-filename="config/plugin.js" data-target="replace">
 'use strict';
 
-exports.sofaRpc = {
-	enable: true,
-	package: 'egg-sofa-rpc',
-};
+exports.sofaRpc = true;
 </pre>
 
 定义接口 
@@ -52,9 +45,6 @@ enum Group {
 
 <pre class="file" data-target="clipboard">
 config.sofaRpc = {
-  registry: {
-    address: '127.0.0.1:2181',
-  },
 	server: {
     namespace: 'com.alipay.sofa.rpc.protobuf'
   },
@@ -78,4 +68,6 @@ exports.echoObj = async function(req) {
 exports.interfaceName = 'com.alipay.sofa.rpc.protobuf.ProtoService';
 </pre>
 
-`npm i egg-rpc-generator --save-dev`{{execute T1}}
+`npm i && npm run dev`{{execute T1}}
+
+`curl http://127.0.0.1:6001`{{execute T1}}
