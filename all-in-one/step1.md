@@ -1,3 +1,5 @@
-## 安装 egg-init
+## 环境准备
 
-`npm i egg-init -g`{{execute}}
+安装 _egg-init_
+
+`npm i egg-init -g`{{execute T1}}
