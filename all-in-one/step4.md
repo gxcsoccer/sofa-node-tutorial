@@ -52,3 +52,5 @@ exports.sofaRpc = {
 返回 `hello zongyu from sofa-node`
 
 http://[[CLIENT_SUBDOMAIN]]-7001-[[KATACODA_HOST]].environments.katacoda.com/
+
+http://[[CLIENT_SUBDOMAIN]]-9411-[[KATACODA_HOST]].environments.katacoda.com/
