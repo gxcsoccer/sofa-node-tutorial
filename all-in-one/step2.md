@@ -6,7 +6,7 @@
 
 `npm i`{{execute T1}}
 
-打开 `rpc-server/config/plugin.js`
+打开 `rpc-server/config/plugin.js`{{open}}
 
 <pre class="file" data-filename="rpc-server/config/plugin.js" data-target="replace">
 'use strict';
