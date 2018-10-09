@@ -9,8 +9,10 @@
 打开 `sofa-rpc-server/config/config.default.js`
 
 <pre class="file" data-filename="sofa-rpc-server/sofa-rpc-server/config/config.default.js"  data-target="replace">
-config.sofaRpc = {
-	server: {
+'use strict';
+
+exports.sofaRpc = {
+  server: {
     namespace: 'com.alipay.sofa.rpc.protobuf'
   },
 };
@@ -68,7 +70,7 @@ exports.echoObj = async function(req) {
 
 #### 5. 启动应用
 
-`npm i && npm run dev -- -p 6001`{{execute T1}}
+`npm i && npm run start`{{execute T1}}
 
 #### 6. 验证
 
