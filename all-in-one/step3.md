@@ -6,7 +6,7 @@
 
 #### 2. 引入接口定义
 
-`mkdir proto && copy ../sofa-rpc-server/proto/ProtoService.proto proto/ProtoService.proto`{{execute T1}}
+`mkdir proto && copy ../sofa-rpc-server/proto/ProtoService.proto proto/ProtoService.proto`{{execute T2}}
 
 #### 3. 配置 proxy
 
@@ -52,20 +52,26 @@ exports.sofaRpc = {
 <pre class="file" data-filename="sofa-rpc-client/app/controller/home.js"  data-target="replace">
 'use strict';
 
-exports.sofaRpc = {
-  client: {
-    'sofarpc.rpc.service.url': '127.0.0.1:12200',
-  },
-};
+const Controller = require('sofa-node-demo').Controller;
+
+class HomeController extends Controller {
+  async index() {
+    this.ctx.body = await this.proxy.protoService.echoObj({
+      name: 'zongyu',
+      group: 'B',
+    });
+  }
+}
+
+module.exports = HomeController;
+</pre>
 
 #### 5. 启动应用
 
-`npm i && npm run start`{{execute T1}}
+`npm i && npm run start`{{execute T2}}
 
 #### 6. 验证
 
-`curl http://127.0.0.1:6001`{{execute T1}}
+`curl http://127.0.0.1:7001`{{execute T2}}
 
-返回 `hi, egg`
-
-`netstat -an | grep 12200`{{execute T1}}
+返回 `hello zongyu from sofa-node'`
