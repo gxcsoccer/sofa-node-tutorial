@@ -19,7 +19,7 @@ exports.sofaRpc = {
 
 定义接口 
 
-`mkdir proto && touch rpc-server/proto/ProtoService.proto`{{execute T1}}
+`mkdir proto && touch proto/ProtoService.proto`{{execute T1}}
 
 <pre class="file" data-filename="rpc-server/proto/ProtoService.proto" data-target="replace">
 syntax = "proto3";
@@ -50,7 +50,7 @@ enum Group {
 
 打开 `rpc-server/config/config.default.js`{{open}}
 
-<pre class="file" data-filename="rpc-server/config/plugin.js" data-target="clipboard">
+<pre class="file" data-target="clipboard">
 config.sofaRpc = {
   registry: {
     address: '127.0.0.1:2181',
