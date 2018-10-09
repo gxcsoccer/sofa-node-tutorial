@@ -6,9 +6,9 @@
 
 `npm i`{{execute T1}}
 
-打开 `rpc-server/config/plugin.js`{{open}}
+打开 `config/plugin.js`{{open}}
 
-<pre class="file" data-filename="rpc-server/config/plugin.js" data-target="replace">
+<pre class="file" data-filename="config/plugin.js" data-target="replace">
 'use strict';
 
 exports.sofaRpc = {
