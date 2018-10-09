@@ -7,6 +7,7 @@
   "details": {
     "steps": [{
       "title": "第一步 - 环境准备",
+      "courseData": "step1.sh",
       "text": "step1.md"
     }, {
       "title": "第二步 - 发布服务",

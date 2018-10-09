@@ -7,8 +7,8 @@
 
 #### 2. 暂停服务
 
-`npm run stop`{execute T1}
-`npm run stop`{execute T2}
+`npm run stop`{{execute T1}}
+`npm run stop`{{execute T2}}
 
 #### 3. 配置 zk 地址
 
@@ -41,8 +41,8 @@ exports.sofaRpc = {
 
 #### 4. 重启服务
 
-`npm run start`{execute T1}
-`npm run start`{execute T2}
+`npm run start`{{execute T1}}
+`npm run start`{{execute T2}}
 
 
 #### 5. 验证
