@@ -17,7 +17,7 @@ exports.sofaRpc = {
 };
 </pre>
 
-定义接口 `rpc-server/proto/ProtoService.proto`{{open}}
+定义接口 `rpc-server/proto/ProtoService.proto`{{create}}
 
 <pre class="file" data-filename="rpc-server/proto/ProtoService.proto" data-target="replace">
 syntax = "proto3";
@@ -59,9 +59,9 @@ config.sofaRpc = {
 };
 </pre>
 
-打开 `rpc-server/app/rpc/ProtoService.js`{{open}}
+打开 `rpc-server/app/rpc/ProtoService.js`{{create}}
 
-<pre class="file" data-filename="rpc-server/app/rpc/ProtoService.js" data-target="clipboard">
+<pre class="file" data-filename="rpc-server/app/rpc/ProtoService.js" data-target="replace">
 'use strict';
 
 exports.echoObj = async function(req) {
