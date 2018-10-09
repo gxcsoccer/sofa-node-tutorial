@@ -1,11 +1,11 @@
 {
-  "title": "SOFA-Node 快速上手",
-  "description": "手把手教你搭建 Node.js 微服务环境",
+  "title": "Hello World Scenario",
+  "description": "Your First Scenario",
   "difficulty": "beginner",
-  "time": "5-10 minutes",
+  "time": "2 minutes",
   "details": {
     "steps": [{
-      "title": "第一步",
+      "title": "Step 1 - Run Command",
       "text": "step1.md"
     }],
     "intro": {
@@ -18,7 +18,7 @@
   },
   "environment": {
     "uilayout": "terminal",
-    "uimessage1": "\u001b[32mYour Interactive Bash Terminal. A safe place to learn and execute commands.\u001b[m\r\n"
+    "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\nStart Kubernetes using `launch.sh`\u001b[m\r\n"
   },
   "backend": {
     "imageid": "bash"
