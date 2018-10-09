@@ -53,4 +53,4 @@ exports.sofaRpc = {
 
 http://[[CLIENT_SUBDOMAIN]]-7001-[[KATACODA_HOST]].environments.katacoda.com/
 
-http://[[CLIENT_SUBDOMAIN]]-9411-[[KATACODA_HOST]].environments.katacoda.com/
+http://[[HOST_SUBDOMAIN]]-9411-[[KATACODA_HOST]].environments.katacoda.com/
