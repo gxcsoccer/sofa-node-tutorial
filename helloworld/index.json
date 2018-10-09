@@ -11,7 +11,8 @@
     }],
     "intro": {
       "text": "intro.md",
-      "credits": ""
+
+      "credits": "courseBase.sh"
     },
     "finish": {
       "text": "finish.md"
