@@ -8,7 +8,7 @@
 
 打开 `sofa-rpc-server/config/config.default.js`
 
-<pre class="file" data-filename="sofa-rpc-server/sofa-rpc-server/config/config.default.js"  data-target="replace">
+<pre class="file" data-filename="sofa-rpc-server/config/config.default.js"  data-target="replace">
 'use strict';
 
 exports.sofaRpc = {

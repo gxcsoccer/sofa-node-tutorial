@@ -14,6 +14,7 @@
       "text": "step2.md"
     }, {
       "title": "第三步 - 调用服务",
+      "courseData": "step3.sh",
       "text": "step3.md"
     }]
   },
