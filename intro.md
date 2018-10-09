@@ -1,1 +1,1 @@
-## SOFA-Node 快速上手教程 
+Welcome to your first Katacoda Scenario!

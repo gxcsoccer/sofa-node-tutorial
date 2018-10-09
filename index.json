@@ -9,7 +9,8 @@
       "text": "step1.md"
     }],
     "intro": {
-      "text": "intro.md"
+      "text": "intro.md",
+      "credits": ""
     },
     "finish": {
       "text": "finish.md"
