@@ -59,7 +59,7 @@ config.sofaRpc = {
 };
 </pre>
 
-打开 `rpc-server/app/rpc/ProtoService.js`{{create}}
+打开 `touch rpc-server/app/rpc/ProtoService.js && open rpc-server/app/rpc/ProtoService.js`{{execute T1}}
 
 <pre class="file" data-filename="rpc-server/app/rpc/ProtoService.js" data-target="replace">
 'use strict';
