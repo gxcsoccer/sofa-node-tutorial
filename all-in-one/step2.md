@@ -4,6 +4,8 @@
 
 `cd sofa-rpc-server`{{execute T1}}
 
+`pwd`{{execute T1}}
+
 #### 2. 配置 sofaRpc server
 
 打开 `sofa-rpc-server/config/config.default.js`
@@ -74,8 +76,8 @@ exports.echoObj = async function(req) {
 
 #### 6. 验证
 
-`curl http://127.0.0.1:6001`{{execute T1}}
-
-返回 `hi, egg`
-
 `netstat -an | grep 12200`{{execute T1}}
+
+```bash
+tcp6       0      0 :::12200                :::*                    LISTEN
+```

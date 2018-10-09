@@ -4,9 +4,11 @@
 
 `cd sofa-rpc-client`{{execute T2}}
 
+`pwd`{{execute T2}}
+
 #### 2. 引入接口定义
 
-`mkdir proto && copy ../sofa-rpc-server/proto/ProtoService.proto proto/ProtoService.proto`{{execute T2}}
+`mkdir proto && cp ../sofa-rpc-server/proto/ProtoService.proto proto/ProtoService.proto`{{execute T2}}
 
 #### 3. 配置 proxy
 
