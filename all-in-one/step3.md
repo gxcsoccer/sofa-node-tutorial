@@ -43,7 +43,7 @@ exports.sofaRpc = {
 
 #### 6. 生成 proxy
 
-`npm run rpc`{{execute T2}}
+`npm i && npm run rpc`{{execute T2}}
 
 在 $app_root/app/proxy 下会生成 rpc 本地代理
 
@@ -58,10 +58,12 @@ const Controller = require('sofa-node-demo').Controller;
 
 class HomeController extends Controller {
   async index() {
-    this.ctx.body = await this.proxy.protoService.echoObj({
+    const ctx = this.ctx;
+    const data = await ctx.proxy.protoService.echoObj({
       name: 'zongyu',
       group: 'B',
     });
+    ctx.body = data.message;
   }
 }
 
@@ -70,10 +72,12 @@ module.exports = HomeController;
 
 #### 5. 启动应用
 
-`npm i && npm run start`{{execute T2}}
+`npm run start`{{execute T2}}
 
 #### 6. 验证
 
 `curl http://127.0.0.1:7001`{{execute T2}}
 
-返回 `hello zongyu from sofa-node'`
+返回 `hello zongyu from sofa-node`
+
+http://[[CLIENT_SUBDOMAIN]]-7001-[[KATACODA_HOST]].environments.katacoda.com/
