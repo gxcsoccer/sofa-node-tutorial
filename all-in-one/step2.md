@@ -17,7 +17,9 @@ exports.sofaRpc = {
 };
 </pre>
 
-定义接口 `rpc-server/proto/ProtoService.proto`{{create}}
+定义接口 
+
+`mkdir proto && touch rpc-server/proto/ProtoService.proto`{{execute T1}}
 
 <pre class="file" data-filename="rpc-server/proto/ProtoService.proto" data-target="replace">
 syntax = "proto3";
@@ -59,7 +61,9 @@ config.sofaRpc = {
 };
 </pre>
 
-打开 `touch rpc-server/app/rpc/ProtoService.js && open rpc-server/app/rpc/ProtoService.js`{{execute T1}}
+实现服务逻辑
+
+`mkdir rpc-server/app/rpc && touch rpc-server/app/rpc/ProtoService.js`{{execute T1}}
 
 <pre class="file" data-filename="rpc-server/app/rpc/ProtoService.js" data-target="replace">
 'use strict';
