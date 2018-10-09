@@ -1,16 +1,20 @@
-初始化服务提供方工程
+1. 初始化服务提供方工程
 
 `cd sofa-rpc-server`{{execute T1}}
 
-打开 `config/plugin.js`{{open}}
+2. 配置 sofaRpc server
 
-<pre class="file" data-filename="config/plugin.js" data-target="replace">
-'use strict';
+打开 `rpc-server/config/config.default.js`{{open}}
 
-exports.sofaRpc = true;
+<pre class="file" data-target="clipboard">
+config.sofaRpc = {
+	server: {
+    namespace: 'com.alipay.sofa.rpc.protobuf'
+  },
+};
 </pre>
 
-定义接口 
+3. 定义接口
 
 `mkdir proto && touch proto/ProtoService.proto`{{execute T1}}
 
@@ -41,19 +45,13 @@ enum Group {
 }
 </pre>
 
-打开 `rpc-server/config/config.default.js`{{open}}
+4. 实现接口逻辑
 
-<pre class="file" data-target="clipboard">
-config.sofaRpc = {
-	server: {
-    namespace: 'com.alipay.sofa.rpc.protobuf'
-  },
-};
-</pre>
-
-实现服务逻辑
+在 $app_root/app/rpc 目录下创建一个和服务同名的 js 文件
 
 `mkdir rpc-server/app/rpc && touch rpc-server/app/rpc/ProtoService.js`{{execute T1}}
+
+实现具体的接口业务
 
 <pre class="file" data-filename="rpc-server/app/rpc/ProtoService.js" data-target="replace">
 'use strict';
@@ -64,10 +62,16 @@ exports.echoObj = async function(req) {
     message: 'hello ' + req.name + ' from sofa-node',
   };
 };
-
-exports.interfaceName = 'com.alipay.sofa.rpc.protobuf.ProtoService';
 </pre>
 
-`npm i && npm run dev`{{execute T1}}
+5. 启动应用
+
+`npm i && npm run dev -- -p 6001`{{execute T1}}
+
+6. 验证
 
 `curl http://127.0.0.1:6001`{{execute T1}}
+
+返回 `hi, egg`
+
+`netstat -an | grep 12200`{{execute T1}}
