@@ -1,10 +1,12 @@
+
+
 #### 1. 初始化服务提供方工程
 
 `cd sofa-rpc-server`{{execute T1}}
 
 #### 2. 配置 sofaRpc server
 
-打开 `sofa-rpc-server/config/config.default.js`{{open}}
+打开 `sofa-rpc-server/config/config.default.js`
 
 <pre class="file" data-filename="sofa-rpc-server/sofa-rpc-server/config/config.default.js"  data-target="replace">
 config.sofaRpc = {
