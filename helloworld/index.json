@@ -21,7 +21,6 @@
     "app.js"
   ],
   "environment": {
-    "hideintro": true,
     "hidefinish": true,
     "uilayout": "editor-terminal",
     "uisettings": "javascript",
