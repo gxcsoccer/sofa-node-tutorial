@@ -2,7 +2,7 @@
 
 #### 1. 从 docker 启动 zookeeper
 
-`docker run -p 2181:2181  -d zookeeper:latest`{execute T3}
+`docker run -p 2181:2181  -d zookeeper:latest`{{execute T3}}
 
 
 #### 2. 暂停服务
