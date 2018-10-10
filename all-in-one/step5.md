@@ -6,11 +6,9 @@ SOFA-Node + Zipkin 实现分布式追踪
 
 #### 2. 暂停服务
 
-`npm run stop`
-{{execute T1}}
+`npm run stop`{{execute T1}}
 
-`npm run stop`
-{{execute T2}}
+`npm run stop`{{execute T2}}
 
 #### 3. 开启 egg-zipkin 插件
 
@@ -32,11 +30,9 @@ exports.zipkin = true;
 
 #### 4. 重启服务
 
-`npm run start`
-{{execute T1}}
+`npm run start`{{execute T1}}
 
-`npm run start -- --port 6001`
-{{execute T2}}
+`npm run start -- --port 6001`{{execute T2}}
 
 
 #### 5. 验证

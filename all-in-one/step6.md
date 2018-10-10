@@ -2,7 +2,10 @@ SOFA-Node + Prometheus 实现度量分析
 
 #### 1. 从 docker 启动 prometheus
 
-`echo "global:
+`touch ~/prometheus.yml`{execute T3}
+
+<pre class="file" data-filename="~/prometheus.yml" data-target="replace">
+global:
   scrape_interval:     15s # Set the scrape interval to every 15 seconds. Default is every 1 minute.
   evaluation_interval: 15s # Evaluate rules every 15 seconds. The default is every 1 minute.
 alerting:
@@ -17,8 +20,8 @@ scrape_configs:
 
     tls_config:
       insecure_skip_verify: true
-" > ~/prometheus.yml`{{execute T3}}
 
+</pre>
 
 `docker run -d -p 9090:9090 -v ~/prometheus.yml:/etc/prometheus/prometheus.yml prom/prometheus`{{execute T3}}
 
@@ -66,7 +69,7 @@ http://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com/
 
 `apt install wrk`{{execute T3}}
 
-`wrk -t5 -c5 -d30 http://127.0.0.1:6001`{{execute T3}}
+`wrk -t5 -c5 -d60 http://127.0.0.1:6001`{{execute T3}}
 
 
 #### 8. 查看报表
