@@ -19,7 +19,11 @@
     }, {
       "title": "第四步 - 服务发现",
       "text": "step4.md"
-    }]
+    }],
+    "intro": {
+      "text": "intro.md",
+      "courseData": "env-init.sh"
+    }
   },
   "environment": {
     "hideintro": true,
