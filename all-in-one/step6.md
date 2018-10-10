@@ -2,7 +2,7 @@ SOFA-Node + Prometheus 实现度量分析
 
 #### 1. 从 docker 启动 prometheus
 
-`touch ~/prometheus.yml`{execute T3}
+`touch ~/prometheus.yml`{{execute T3}}
 
 <pre class="file" data-filename="~/prometheus.yml" data-target="replace">
 global:
@@ -57,13 +57,15 @@ http://[[HOST_SUBDOMAIN]]-6001-[[KATACODA_HOST]].environments.katacoda.com/
 
 http://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com/
 
+![image](https://user-images.githubusercontent.com/1207064/46746075-e0240e00-cce0-11e8-99ed-cf24374594b8.png)
+
 添加 metrics
 
-`sum(rate(http_request_rate[5m])) by (instance)`
+- `sum(rate(http_request_rate[5m])) by (instance)`
 
-`avg(http_response_time_ms{quantile="0.95"})`
+- `avg(http_response_time_ms{quantile="0.95"})`
 
-`sum without (instance)(rate(http_response_time_ms{quantile="0.95"}[5m]))`
+- `sum without (instance)(rate(http_response_time_ms{quantile="0.95"}[5m]))`
 
 #### 7. 压测
 
