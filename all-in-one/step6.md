@@ -73,6 +73,5 @@ http://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com/
 
 `wrk -t5 -c5 -d60 http://127.0.0.1:6001`{{execute T3}}
 
-
 #### 8. 查看报表
 
