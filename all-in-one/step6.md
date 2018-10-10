@@ -54,7 +54,6 @@ http://[[HOST_SUBDOMAIN]]-6001-[[KATACODA_HOST]].environments.katacoda.com/
 
 http://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com/
 
-
 添加 metrics
 
 `sum(rate(http_request_rate[5m])) by (instance)`
@@ -62,4 +61,13 @@ http://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com/
 `avg(http_response_time_ms{quantile="0.95"})`
 
 `sum without (instance)(rate(http_response_time_ms{quantile="0.95"}[5m]))`
+
+#### 7. 压测
+
+`apt install wrk`{{execute T3}}
+
+`wrk -t5 -c5 -d30 http://127.0.0.1:6001`{{execute T3}}
+
+
+#### 8. 查看报表
 
