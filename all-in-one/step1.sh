@@ -1,1 +1,0 @@
-cd rpc-server

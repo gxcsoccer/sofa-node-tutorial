@@ -6,11 +6,9 @@
   "details": {
     "steps": [{
       "title": "第一步 - 环境准备",
-      "courseData": "step1.sh",
       "text": "step1.md"
     }, {
       "title": "第二步 - 发布服务",
-      "courseData": "step2.sh",
       "text": "step2.md"
     }, {
       "title": "第三步 - 调用服务",
@@ -19,15 +17,11 @@
     }, {
       "title": "第四步 - 服务发现",
       "text": "step4.md"
-    }],
-    "intro": {
-      "text": "intro.md",
-      "courseData": "env-init.sh"
-    }
+    }]
   },
   "environment": {
     "hideintro": false,
-    "hidefinish": true,
+    "hidefinish": false,
     "uilayout": "editor-terminal",
     "uisettings": "javascript",
     "uimessage1": "\u001b[32mYour Interactive Bash Terminal. A safe place to learn and execute commands.\u001b[m\r\n"

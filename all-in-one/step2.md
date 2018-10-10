@@ -2,15 +2,15 @@
 
 #### 1. 初始化服务提供方工程
 
-`cd sofa-rpc-server`{{execute T1}}
+`cd rpc-server && pwd`{{execute T1}}
 
-`pwd`{{execute T1}}
+`egg-init -t microservice`{{execute T1}}
 
 #### 2. 配置 sofaRpc server
 
-打开 `sofa-rpc-server/config/config.default.js`
+打开 `rpc-server/config/config.default.js`
 
-<pre class="file" data-filename="sofa-rpc-server/config/config.default.js"  data-target="replace">
+<pre class="file" data-filename="rpc-server/config/config.default.js"  data-target="replace">
 'use strict';
 
 exports.sofaRpc = {
@@ -24,7 +24,7 @@ exports.sofaRpc = {
 
 `mkdir proto && touch proto/ProtoService.proto`{{execute T1}}
 
-<pre class="file" data-filename="sofa-rpc-server/proto/ProtoService.proto" data-target="replace">
+<pre class="file" data-filename="rpc-server/proto/ProtoService.proto" data-target="replace">
 syntax = "proto3";
 
 package com.alipay.sofa.rpc.protobuf;
@@ -59,7 +59,7 @@ enum Group {
 
 实现具体的接口业务
 
-<pre class="file" data-filename="sofa-rpc-server/app/rpc/ProtoService.js" data-target="replace">
+<pre class="file" data-filename="rpc-server/app/rpc/ProtoService.js" data-target="replace">
 'use strict';
 
 exports.echoObj = async function(req) {

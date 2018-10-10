@@ -1,1 +1,1 @@
-mkdir rpc-client && mkdir rpc-server
+docker pull zookeeper:latest
