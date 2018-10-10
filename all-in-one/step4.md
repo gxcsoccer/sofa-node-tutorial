@@ -1,4 +1,4 @@
-通过 zookeeper 实现服务发现
+Zookeeper 做注册中心实现软负载
 
 #### 1. 从 docker 启动 zookeeper
 
@@ -12,9 +12,9 @@
 
 #### 3. 配置 zk 地址
 
-修改客户端配置 `sofa-rpc-client/config/config.default.js`
+修改客户端配置 `rpc-client/config/config.default.js`
 
-<pre class="file" data-filename="sofa-rpc-client/config/config.default.js" data-target="replace">
+<pre class="file" data-filename="rpc-client/config/config.default.js" data-target="replace">
 'use strict';
 
 exports.sofaRpc = {
@@ -24,9 +24,9 @@ exports.sofaRpc = {
 };
 </pre>
 
-修改服务器端配置 `sofa-rpc-server/config/config.default.js`
+修改服务器端配置 `rpc-server/config/config.default.js`
 
-<pre class="file" data-filename="sofa-rpc-server/config/config.default.js" data-target="replace">
+<pre class="file" data-filename="rpc-server/config/config.default.js" data-target="replace">
 'use strict';
 
 exports.sofaRpc = {
@@ -52,5 +52,3 @@ exports.sofaRpc = {
 返回 `hello zongyu from sofa-node`
 
 http://[[CLIENT_SUBDOMAIN]]-7001-[[KATACODA_HOST]].environments.katacoda.com/
-
-http://[[HOST_SUBDOMAIN]]-9411-[[KATACODA_HOST]].environments.katacoda.com/

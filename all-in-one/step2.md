@@ -2,9 +2,9 @@
 
 #### 1. 初始化服务提供方工程
 
-`cd rpc-server && pwd`{{execute T1}}
+`mkdir rpc-server && cd rpc-server && pwd`{{execute T1}}
 
-`egg-init -t microservice`{{execute T1}}
+`egg-init --type microservice`{{execute T1}}
 
 #### 2. 配置 sofaRpc server
 
@@ -22,34 +22,7 @@ exports.sofaRpc = {
 
 #### 3. 定义接口
 
-`mkdir proto && touch proto/ProtoService.proto`{{execute T1}}
-
-<pre class="file" data-filename="rpc-server/proto/ProtoService.proto" data-target="replace">
-syntax = "proto3";
-
-package com.alipay.sofa.rpc.protobuf;
-option java_multiple_files = true; // 可选
-option java_outer_classname = "ProtoServiceModels"; // 可选
-
-service ProtoService {
-    rpc echoObj (EchoRequest) returns (EchoResponse) {}
-}
-
-message EchoRequest {
-    string name = 1;
-    Group group = 2;
-}
-
-message EchoResponse {
-    int32 code = 1;
-    string message = 2;
-}
-
-enum Group {
-    A = 0;
-    B = 1;
-}
-</pre>
+`rpc-server/proto/ProtoService.proto`{{open}}
 
 #### 4. 实现接口逻辑
 

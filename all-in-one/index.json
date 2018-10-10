@@ -12,12 +12,23 @@
       "text": "step2.md"
     }, {
       "title": "第三步 - 调用服务",
-      "courseData": "step3.sh",
       "text": "step3.md"
     }, {
       "title": "第四步 - 服务发现",
       "text": "step4.md"
-    }]
+    }, {
+      "title": "第四步 - 分布式追踪",
+      "text": "step5.md"
+    }, {
+      "title": "第五步 - 应用度量",
+      "text": "step6.md"
+    }],
+    "assets": {
+      "client": [{
+        "file": "prometheus.yml",
+        "target": "~/"
+      }]
+    }
   },
   "environment": {
     "hideintro": true,
