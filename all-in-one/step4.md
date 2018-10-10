@@ -42,13 +42,13 @@ exports.sofaRpc = {
 #### 4. 重启服务
 
 `npm run start`{{execute T1}}
-`npm run start`{{execute T2}}
+`npm run start -- --port 6001`{{execute T2}}
 
 
 #### 5. 验证
 
-`curl http://127.0.0.1:7001`{{execute T2}}
+`curl http://127.0.0.1:6001`{{execute T2}}
 
 返回 `hello zongyu from sofa-node`
 
-http://[[CLIENT_SUBDOMAIN]]-7001-[[KATACODA_HOST]].environments.katacoda.com/
+http://[[HOST_SUBDOMAIN]]-6001-[[KATACODA_HOST]].environments.katacoda.com/

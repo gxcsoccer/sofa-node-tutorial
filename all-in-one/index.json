@@ -27,6 +27,10 @@
       "client": [{
         "file": "prometheus.yml",
         "target": "~/"
+      }],
+      "host01": [{
+        "file": "prometheus.yml",
+        "target": "~/"
       }]
     }
   },
