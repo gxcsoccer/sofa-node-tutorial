@@ -12,7 +12,7 @@
 
 #### 3. 配置 proxy
 
-在 `$app_root/app/config/proxy.js` 里配置要调用的接口信息
+在 `$app_root/config/proxy.js` 里配置要调用的接口信息
 
 <pre class="file" data-filename="rpc-client/config/proxy.js" data-target="replace">
 'use strict';

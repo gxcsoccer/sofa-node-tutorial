@@ -27,6 +27,7 @@ scrape_configs:
 
 #### 2. 暂停服务
 
+停掉 rpc-client
 `npm run stop`{{execute T2}}
 
 #### 3. 开启 egg-prometheus 插件
@@ -42,6 +43,7 @@ exports.prometheus = true;
 
 #### 4. 重启服务
 
+启动 rpc-client
 `npm run start -- --port 6001`{{execute T2}}
 
 

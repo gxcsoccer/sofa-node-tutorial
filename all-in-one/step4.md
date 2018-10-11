@@ -7,8 +7,10 @@ Zookeeper 做注册中心实现软负载
 
 #### 2. 暂停服务
 
+停掉 rpc-server
 `npm run stop`{{execute T1}}
 
+停掉 rpc-client
 `npm run stop`{{execute T2}}
 
 #### 3. 配置 zk 地址
@@ -42,8 +44,10 @@ exports.sofaRpc = {
 
 #### 4. 重启服务
 
+启动 rpc-server
 `npm run start`{{execute T1}}
 
+启动 rpc-client
 `npm run start -- --port 6001`{{execute T2}}
 
 
