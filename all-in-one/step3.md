@@ -12,7 +12,7 @@
 
 #### 3. 配置 proxy
 
-在 `$app_root/config/proxy.js` 里配置要调用的接口信息
+在 `rpc-client/config/proxy.js` 里配置要调用的接口信息
 
 <pre class="file" data-filename="rpc-client/config/proxy.js" data-target="replace">
 'use strict';
@@ -46,7 +46,7 @@ exports.sofaRpc = {
 
 `npm i && npm run init`{{execute T2}}
 
-在 $app_root/app/proxy 下会生成 rpc 本地代理
+在 `rpc-client/app/proxy` 下会生成 rpc 本地代理
 
 #### 6. 调用服务
 
