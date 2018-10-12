@@ -2,7 +2,7 @@
 
 `curl -sL https://deb.nodesource.com/setup_10.x | bash -`{{execute T1}}
 
-`apt-get install -y nodejs net-tools`{{execute T1}}
+`apt-get install -y nodejs net-tools wrk`{{execute T1}}
 
 #### 2. 安装 egg-init 脚手架
 

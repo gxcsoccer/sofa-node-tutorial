@@ -55,7 +55,7 @@ exports.sofaRpc = {
 <pre class="file" data-filename="rpc-client/app/controller/home.js"  data-target="replace">
 'use strict';
 
-const Controller = require('sofa-node-demo').Controller;
+const Controller = require('sofa-node').Controller;
 
 class HomeController extends Controller {
   async index() {

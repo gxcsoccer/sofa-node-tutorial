@@ -6,8 +6,8 @@ SOFA-Node + Prometheus 实现度量分析
 
 <pre class="file" data-filename="~/prometheus.yml" data-target="replace">
 global:
-  scrape_interval:     15s # Set the scrape interval to every 15 seconds. Default is every 1 minute.
-  evaluation_interval: 15s # Evaluate rules every 15 seconds. The default is every 1 minute.
+  scrape_interval:     5s # Set the scrape interval to every 5 seconds. Default is every 1 minute.
+  evaluation_interval: 5s # Evaluate rules every 5 seconds. The default is every 1 minute.
 alerting:
   alertmanagers:
   - static_configs:
@@ -72,8 +72,6 @@ http://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com/
 - `sum without (instance)(rate(http_response_time_ms{quantile="0.95"}[5m]))`
 
 #### 7. 压测
-
-`apt install wrk`{{execute T3}}
 
 `wrk -t5 -c5 -d60 http://127.0.0.1:6001`{{execute T3}}
 
